@@ -1,0 +1,33 @@
+[gd_scene load_steps=4 format=3 uid="uid://ddqvtriuwrwm4"]
+
+[ext_resource type="Script" uid="uid://b3dopkugpblkl" path="res://Pinball/pinball.gd" id="1_bn3cb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bn3cb"]
+size = Vector2(2500, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nnd53"]
+size = Vector2(20, 1500)
+
+[node name="Pinball" type="Node"]
+script = ExtResource("1_bn3cb")
+
+[node name="Exit" type="Area2D" parent="."]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Exit"]
+position = Vector2(960, 1639)
+shape = SubResource("RectangleShape2D_bn3cb")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Exit"]
+position = Vector2(-286, 735)
+shape = SubResource("RectangleShape2D_nnd53")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Exit"]
+position = Vector2(2214, 742)
+shape = SubResource("RectangleShape2D_nnd53")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Exit"]
+position = Vector2(962, -178)
+shape = SubResource("RectangleShape2D_bn3cb")
+
+[connection signal="body_entered" from="Exit" to="." method="_on_area_2d_body_entered"]

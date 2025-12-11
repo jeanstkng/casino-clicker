@@ -1,0 +1,41 @@
+[gd_scene load_steps=4 format=3 uid="uid://dwop2b5lkcetm"]
+
+[ext_resource type="Script" uid="uid://k60tfmq8bqj7" path="res://main.gd" id="1_ig7tw"]
+[ext_resource type="AudioStream" uid="uid://x4elf4e8lvlj" path="res://music/DistracTorGameBG_Main.wav" id="2_0xm2m"]
+[ext_resource type="Texture2D" uid="uid://hwuqx550kvn1" path="res://gui/return-button.svg" id="3_h2yge"]
+
+[node name="Main" type="Node"]
+script = ExtResource("1_ig7tw")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
+color = Color(0.384314, 0.372549, 0.305882, 1)
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+offset_left = 33.0
+offset_top = 813.0
+offset_right = 433.0
+offset_bottom = 1063.0
+
+[node name="Cash" type="Label" parent="CenterContainer"]
+layout_mode = 2
+theme_override_constants/outline_size = 20
+theme_override_font_sizes/font_size = 100
+text = "0"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_0xm2m")
+volume_db = -10.0
+autoplay = true
+
+[node name="Return" type="TextureButton" parent="."]
+offset_left = 1718.0
+offset_top = 43.0
+offset_right = 1858.0
+offset_bottom = 183.0
+texture_normal = ExtResource("3_h2yge")
+ignore_texture_size = true
+stretch_mode = 5
+
+[connection signal="button_up" from="Return" to="." method="_on_return_button_up"]

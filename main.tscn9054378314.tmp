@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://dwop2b5lkcetm"]
+
+[ext_resource type="Script" uid="uid://b3dopkugpblkl" path="res://main.gd" id="1_ig7tw"]
+
+[node name="Main" type="Node"]
+script = ExtResource("1_ig7tw")
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+offset_left = 33.0
+offset_top = 813.0
+offset_right = 433.0
+offset_bottom = 1063.0
+
+[node name="Cash" type="Label" parent="CenterContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 100
+text = "0"

@@ -1,0 +1,170 @@
+[gd_scene load_steps=12 format=3 uid="uid://j7xx0m3ikdca"]
+
+[ext_resource type="Script" uid="uid://cjcxjub3rd2n8" path="res://SlotMachine/slot_machine.gd" id="1_3f5qq"]
+[ext_resource type="Texture2D" uid="uid://bjgrg42eug44w" path="res://SlotMachine/assets/depelos.jpg" id="2_jr5ke"]
+[ext_resource type="Script" uid="uid://be7ec65qlubcl" path="res://SlotMachine/reel_container.gd" id="2_w5nek"]
+[ext_resource type="Texture2D" uid="uid://d1rnqphd1mhar" path="res://SlotMachine/assets/ardillasmile.png" id="3_w5nek"]
+[ext_resource type="Texture2D" uid="uid://vwnypevegyrr" path="res://SlotMachine/assets/cryngmask.jpg" id="4_ty188"]
+[ext_resource type="Texture2D" uid="uid://bhh2aen2cvjii" path="res://SlotMachine/assets/gatomirando.jpg" id="5_tljwh"]
+[ext_resource type="Texture2D" uid="uid://csxrwllm568s8" path="res://SlotMachine/assets/ia-estoy-arto.jpg" id="6_rm22v"]
+[ext_resource type="Texture2D" uid="uid://vogq03ngago6" path="res://SlotMachine/assets/imaginameme.png" id="7_5bl03"]
+[ext_resource type="Texture2D" uid="uid://n0iike3byhfa" path="res://SlotMachine/assets/juanmeme.jpeg" id="8_qa6e4"]
+[ext_resource type="Texture2D" uid="uid://ctr40n51mihtw" path="res://SlotMachine/assets/muchachos.jpg" id="9_hshs2"]
+[ext_resource type="Texture2D" uid="uid://48kydf1w6m2n" path="res://SlotMachine/assets/picardia.jpg" id="10_ef05m"]
+
+[node name="SlotMachine" type="Node2D"]
+script = ExtResource("1_3f5qq")
+
+[node name="Reel1Mask" type="ColorRect" parent="."]
+clip_contents = true
+offset_left = 700.0
+offset_top = 340.0
+offset_right = 900.0
+offset_bottom = 740.0
+
+[node name="Reel1Container" type="Control" parent="Reel1Mask"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 3.0
+offset_top = 15.0
+offset_right = 43.0
+offset_bottom = 55.0
+script = ExtResource("2_w5nek")
+
+[node name="Symbol1" type="Sprite2D" parent="Reel1Mask/Reel1Container"]
+position = Vector2(100, -740)
+texture = ExtResource("2_jr5ke")
+
+[node name="Symbol2" type="Sprite2D" parent="Reel1Mask/Reel1Container"]
+position = Vector2(100, -608)
+texture = ExtResource("3_w5nek")
+
+[node name="Symbol3" type="Sprite2D" parent="Reel1Mask/Reel1Container"]
+position = Vector2(100, -476)
+texture = ExtResource("4_ty188")
+
+[node name="Symbol4" type="Sprite2D" parent="Reel1Mask/Reel1Container"]
+position = Vector2(100, -344)
+texture = ExtResource("5_tljwh")
+
+[node name="Symbol5" type="Sprite2D" parent="Reel1Mask/Reel1Container"]
+position = Vector2(100, -212)
+texture = ExtResource("6_rm22v")
+
+[node name="Symbol6" type="Sprite2D" parent="Reel1Mask/Reel1Container"]
+position = Vector2(100, -80)
+texture = ExtResource("7_5bl03")
+
+[node name="Symbol7" type="Sprite2D" parent="Reel1Mask/Reel1Container"]
+position = Vector2(100, 52)
+texture = ExtResource("8_qa6e4")
+
+[node name="Symbol8" type="Sprite2D" parent="Reel1Mask/Reel1Container"]
+position = Vector2(100, 184)
+texture = ExtResource("9_hshs2")
+
+[node name="Symbol9" type="Sprite2D" parent="Reel1Mask/Reel1Container"]
+position = Vector2(100, 316)
+texture = ExtResource("10_ef05m")
+
+[node name="Reel2Mask" type="ColorRect" parent="."]
+clip_contents = true
+offset_left = 960.0
+offset_top = 340.0
+offset_right = 1160.0
+offset_bottom = 740.0
+
+[node name="Reel2Container" type="Control" parent="Reel2Mask"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 3.0
+offset_top = 15.0
+offset_right = 43.0
+offset_bottom = 55.0
+script = ExtResource("2_w5nek")
+
+[node name="Symbol1" type="Sprite2D" parent="Reel2Mask/Reel2Container"]
+position = Vector2(100, -740)
+texture = ExtResource("2_jr5ke")
+
+[node name="Symbol2" type="Sprite2D" parent="Reel2Mask/Reel2Container"]
+position = Vector2(100, -608)
+texture = ExtResource("3_w5nek")
+
+[node name="Symbol3" type="Sprite2D" parent="Reel2Mask/Reel2Container"]
+position = Vector2(100, -476)
+texture = ExtResource("4_ty188")
+
+[node name="Symbol4" type="Sprite2D" parent="Reel2Mask/Reel2Container"]
+position = Vector2(100, -344)
+texture = ExtResource("5_tljwh")
+
+[node name="Symbol5" type="Sprite2D" parent="Reel2Mask/Reel2Container"]
+position = Vector2(100, -212)
+texture = ExtResource("6_rm22v")
+
+[node name="Symbol6" type="Sprite2D" parent="Reel2Mask/Reel2Container"]
+position = Vector2(100, -80)
+texture = ExtResource("7_5bl03")
+
+[node name="Symbol7" type="Sprite2D" parent="Reel2Mask/Reel2Container"]
+position = Vector2(100, 52)
+texture = ExtResource("8_qa6e4")
+
+[node name="Symbol8" type="Sprite2D" parent="Reel2Mask/Reel2Container"]
+position = Vector2(100, 184)
+texture = ExtResource("9_hshs2")
+
+[node name="Symbol9" type="Sprite2D" parent="Reel2Mask/Reel2Container"]
+position = Vector2(100, 316)
+texture = ExtResource("10_ef05m")
+
+[node name="Reel3Mask" type="ColorRect" parent="."]
+clip_contents = true
+offset_left = 1220.0
+offset_top = 340.0
+offset_right = 1420.0
+offset_bottom = 740.0
+
+[node name="Reel3Container" type="Control" parent="Reel3Mask"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("2_w5nek")
+
+[node name="Symbol1" type="Sprite2D" parent="Reel3Mask/Reel3Container"]
+position = Vector2(100, -740)
+texture = ExtResource("2_jr5ke")
+
+[node name="Symbol2" type="Sprite2D" parent="Reel3Mask/Reel3Container"]
+position = Vector2(100, -608)
+texture = ExtResource("3_w5nek")
+
+[node name="Symbol3" type="Sprite2D" parent="Reel3Mask/Reel3Container"]
+position = Vector2(100, -476)
+texture = ExtResource("4_ty188")
+
+[node name="Symbol4" type="Sprite2D" parent="Reel3Mask/Reel3Container"]
+position = Vector2(100, -344)
+texture = ExtResource("5_tljwh")
+
+[node name="Symbol5" type="Sprite2D" parent="Reel3Mask/Reel3Container"]
+position = Vector2(100, -212)
+texture = ExtResource("6_rm22v")
+
+[node name="Symbol6" type="Sprite2D" parent="Reel3Mask/Reel3Container"]
+position = Vector2(100, -80)
+texture = ExtResource("7_5bl03")
+
+[node name="Symbol7" type="Sprite2D" parent="Reel3Mask/Reel3Container"]
+position = Vector2(100, 52)
+texture = ExtResource("8_qa6e4")
+
+[node name="Symbol8" type="Sprite2D" parent="Reel3Mask/Reel3Container"]
+position = Vector2(100, 184)
+texture = ExtResource("9_hshs2")
+
+[node name="Symbol9" type="Sprite2D" parent="Reel3Mask/Reel3Container"]
+position = Vector2(100, 316)
+texture = ExtResource("10_ef05m")

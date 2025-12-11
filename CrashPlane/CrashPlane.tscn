@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://ky34exkxk6l6"]
+
+[ext_resource type="Script" uid="uid://digpvpucf2yvq" path="res://CrashPlane/crash_plane.gd" id="1_xegih"]
+[ext_resource type="Texture2D" uid="uid://d1rnqphd1mhar" path="res://SlotMachine/assets/ardillasmile.png" id="2_c00fs"]
+
+[node name="CrashPlane" type="Node2D"]
+script = ExtResource("1_xegih")
+
+[node name="Bet" type="Label" parent="."]
+offset_left = 1435.0
+offset_top = 773.0
+offset_right = 1563.0
+offset_bottom = 875.0
+theme_override_font_sizes/font_size = 74
+text = "100"
+
+[node name="Multiplier" type="Label" parent="."]
+offset_left = 1167.0
+offset_top = 900.0
+offset_right = 1295.0
+offset_bottom = 1002.0
+theme_override_font_sizes/font_size = 74
+text = "100"
+
+[node name="Airplane" type="Sprite2D" parent="."]
+position = Vector2(424, 622)
+texture = ExtResource("2_c00fs")

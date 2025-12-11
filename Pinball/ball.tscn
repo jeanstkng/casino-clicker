@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://c1o6p3g5g48s6"]
+
+[ext_resource type="Script" uid="uid://yuilnxeonyl7" path="res://Pinball/ball.gd" id="1_x8fbi"]
+
+[node name="Ball" type="RigidBody2D"]
+collision_layer = 2
+collision_mask = 15
+script = ExtResource("1_x8fbi")

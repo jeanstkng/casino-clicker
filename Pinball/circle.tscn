@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://drl252ex4e3f3"]
+
+[ext_resource type="Script" uid="uid://6sml4k6uljsr" path="res://Pinball/circle.gd" id="1_ot13w"]
+[ext_resource type="Script" uid="uid://c3wq5lif6r5ey" path="res://Pinball/circle_body.gd" id="2_whlr7"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_ot13w"]
+particle_flag_disable_z = true
+emission_shape = 6
+emission_ring_axis = Vector3(0, 0, 1)
+emission_ring_height = 1.0
+emission_ring_radius = 90.0
+emission_ring_inner_radius = 85.0
+emission_ring_cone_angle = 90.0
+gravity = Vector3(0, 98, 0)
+
+[node name="circle" type="Node2D"]
+script = ExtResource("1_ot13w")
+
+[node name="ring_effect" type="GPUParticles2D" parent="."]
+emitting = false
+amount = 200
+lifetime = 0.6
+one_shot = true
+randomness = 0.3
+process_material = SubResource("ParticleProcessMaterial_ot13w")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+collision_layer = 4
+collision_mask = 6
+script = ExtResource("2_whlr7")
